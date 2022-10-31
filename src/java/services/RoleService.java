@@ -5,10 +5,20 @@
  */
 package services;
 
+import models.Role;
+import dataaccess.RoleDB;
+
 /**
  *
- * @author ohiow
+ * @author William Lau
  */
 public class RoleService {
     
+    public static Role get(int roleID) throws Exception{
+        RoleDB roleDb = new RoleDB();
+        Role role = roleDb.get(roleID);
+        
+        return role;
+        
+}
 }
